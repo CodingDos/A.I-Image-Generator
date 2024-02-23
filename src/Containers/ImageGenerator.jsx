@@ -2,7 +2,6 @@ import './ImgGen.css'
 import DefaultImg from "./DefaultImg/CMcgExw.png"
 import { useRef, useState } from 'react'
 import axios from 'axios'
-
 import React from 'react'
 
 function ImageGenerator() {
@@ -25,7 +24,7 @@ function ImageGenerator() {
                 {
                     headers: {
                         "Content-Type": "application/json", 
-                        Authorization: "Bearer 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",
+                        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
                     }
                 }
             )
