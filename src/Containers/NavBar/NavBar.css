@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 4em;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+    z-index: 2;
+}
+
+.NavBar-menu {
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: black;
+}
+
+.menuBar {
+    width: 4em;
+    height: 0.5em;
+    background-color: rgb(91, 13, 13);
+    border-radius: 0.5em;
+}
+
+.menuBar:hover{
+    background-color: rgb(107, 15, 15);
+
+}
+
+.menu {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(91, 13, 13);
+    top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    position: absolute;
+    width: 25%;
+    max-width: 50%;
+    max-height: 75%;
+    z-index: 1;
+}
+
+
+.menuBar.Clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.57em, 1em);
+    transition: ease-out 0.5s;
+}
+.menuBar.Clicked:nth-child(2){
+    transform: scale(0.01);
+    transition: ease-out 0.5s;
+}
+.menuBar.Clicked:nth-child(3){
+    transform: rotate(135deg) translate(0em, 0.5em);
+    transition: ease-out 0.5s;
+}
+
+
+
+.menuBar.Unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

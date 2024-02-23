@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ImageGenerator from './Containers/ImageGenerator.jsx'
+import BackgroundVideo from './Containers/BackgroundVideo/video (1080p).mp4'
+import NavBar from './Containers/NavBar/NavBar.jsx'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <div className="NavBar-main"> */}
+        <NavBar />
+      {/* </div> */}
+      <div>
+        <video src={BackgroundVideo} autoPlay loop muted />
+      </div>  
+      {/* <div className="ImageGenMain"> */}
+        {/* <video src={BackgroundVideo} autoPlay loop muted /> */}
+        <ImageGenerator/>
+      {/* </div> */}
     </div>
   );
 }
